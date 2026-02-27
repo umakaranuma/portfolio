@@ -1,12 +1,12 @@
 .resume-section {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .resume-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 48px;
-  max-width: 960px;
+  gap: 32px 44px;
+  max-width: 920px;
   margin: 0 auto;
   text-align: left;
 }
@@ -18,17 +18,26 @@
   gap: 28px;
 }
 
-.resume-heading {
-  margin: 0 0 16px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
+.resume-block {
+  padding: 22px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition);
 }
 
-.resume-block {
-  padding-bottom: 4px;
+.resume-block:hover {
+  border-color: var(--border-muted);
+  box-shadow: var(--shadow-sm);
+}
+
+.resume-heading {
+  margin: 0 0 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
 }
 
 /* Experience */
@@ -42,28 +51,30 @@
 
 .resume-job-header {
   font-size: 15px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .resume-job-company {
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 
 .resume-job-meta {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  color: var(--text-muted);
   margin-top: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .resume-bullets {
   margin: 0;
   padding-left: 20px;
   font-size: 13px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.65;
+  color: var(--text-secondary);
 }
 
 .resume-bullets li {
@@ -85,33 +96,34 @@
 
 .resume-project-name {
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .resume-project-tags {
   font-size: 12px;
-  color: #2d9cdb;
+  font-weight: 500;
+  color: var(--accent);
   margin-top: 2px;
 }
 
 .resume-project-desc {
   margin: 6px 0 0;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.5;
+  color: var(--text-secondary);
+  line-height: 1.55;
 }
 
 /* Education */
 .resume-edu-degree {
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .resume-edu-institution {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   margin-top: 2px;
 }
 
@@ -120,8 +132,8 @@
   margin: 0;
   padding-left: 20px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.75;
 }
 
 /* Technical Skills (right column) */
@@ -136,15 +148,15 @@
 .resume-skill-title {
   margin: 0 0 4px;
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .resume-skill-items {
   margin: 0;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.5;
+  color: var(--text-secondary);
+  line-height: 1.55;
 }
 
 /* Achievements */
@@ -152,8 +164,8 @@
   margin: 0;
   padding-left: 20px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.75;
 }
 
 .resume-achievements li {
@@ -167,6 +179,6 @@
 @media (max-width: 800px) {
   .resume-columns {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 }

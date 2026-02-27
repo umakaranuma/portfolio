@@ -1,0 +1,73 @@
+.opensource-section {
+  padding: 48px 0 56px;
+}
+
+.opensource-title {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.opensource-subtitle {
+  margin: 0 0 28px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.opensource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.opensource-card {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition);
+}
+
+.opensource-card:hover {
+  border-color: var(--border-muted);
+  box-shadow: var(--shadow-sm);
+}
+
+.opensource-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.opensource-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.opensource-platform {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.15);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.opensource-desc {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.opensource-count {
+  font-size: 12px;
+  color: var(--text-muted);
+}

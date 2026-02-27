@@ -1,70 +1,103 @@
 .skills-section {
-  margin-top: 8px;
+  margin-top: 4px;
+  padding: 48px 0 56px;
+}
+
+.skills-section-title {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.skills-section-subtitle {
+  margin: 0 0 28px;
+  font-size: 15px;
+  color: var(--text-muted);
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px 48px;
-  max-width: 900px;
+  gap: 24px 40px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
 .skills-category {
-  text-align: left;
+  padding: 20px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition);
+}
+
+.skills-category:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-muted);
+  box-shadow: var(--shadow-sm);
 }
 
 .skills-category-title {
   margin: 0 0 16px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .skills-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
 }
 
-.skill-check {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  border-radius: 50%;
-  background: #2d9cdb;
-  color: #fff;
+.skill-name-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.skill-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
 }
 
 .skill-name {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-primary);
 }
 
-.skill-level {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.55);
+.skill-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.skill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-muted);
+  opacity: 0.5;
+  transition: all var(--transition);
+}
+
+.skill-dot.filled {
+  background: var(--accent);
+  opacity: 1;
 }
 
 @media (max-width: 720px) {
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 20px;
   }
 }

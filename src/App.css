@@ -1,29 +1,33 @@
 /* Import component styles */
 @import './components/Navigation.css';
 @import './components/Hero.css';
-@import './components/Projects.css';
+@import './components/TrustStrip.css';
+@import './components/FeaturedProjects.css';
 @import './components/ProjectCard.css';
+@import './components/CaseStudyModal.css';
 @import './components/Skills.css';
-@import './components/Resume.css';
-@import './components/CTA.css';
+@import './components/Experience.css';
+@import './components/Highlights.css';
+@import './components/OpenSource.css';
+@import './components/Contact.css';
+@import './components/Footer.css';
 
-/* Global styles - dark theme to match design */
 .page {
   min-height: 100vh;
-  padding: 32px 24px 64px;
-  max-width: 1000px;
+  padding: 0 20px 0;
+  max-width: 980px;
   margin: 0 auto;
-  color: #e5ecff;
+  color: var(--text-primary);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 0;
 }
 
 @media (max-width: 720px) {
   .page {
-    padding: 20px 16px 40px;
+    padding: 0 16px 0;
   }
 }

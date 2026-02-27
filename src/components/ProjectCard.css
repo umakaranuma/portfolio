@@ -1,102 +1,152 @@
 .project-card {
   position: relative;
-  border-radius: 16px;
-  padding: 20px 20px 18px;
-  background: #1e202b;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 20px;
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
   overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: all var(--transition);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), transparent 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
 }
 
 .project-card:hover {
-  border-color: rgba(45, 156, 219, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: var(--bg-card-hover);
+  border-color: var(--border-muted);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.project-metrics {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .project-icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   margin-bottom: 14px;
-  background: #2d9cdb;
-  opacity: 0.9;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  opacity: 0.95;
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .project-title {
   margin: 0;
-  font-size: 18px;
-  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .project-subtitle {
   margin: 2px 0 0;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 .project-description {
-  margin: 10px 0 12px;
+  margin: 10px 0 14px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.5;
-}
-
-.project-bullets {
-  margin: 0 0 16px;
-  padding-left: 18px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.project-bullets li + li {
-  margin-top: 2px;
-}
-
-.project-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-bottom: 16px;
 }
 
 .tag {
-  padding: 4px 10px;
-  border-radius: 8px;
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
   font-size: 11px;
-  background: rgba(45, 156, 219, 0.2);
-  border: 1px solid rgba(45, 156, 219, 0.4);
-  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  transition: background var(--transition), border-color var(--transition);
 }
 
-.ghost-button {
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: transparent;
-  color: #fff;
+.project-card:hover .tag {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
   cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s;
+  transition: all var(--transition);
   text-decoration: none;
+  border: none;
 }
 
-.ghost-button:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.5);
+.project-btn-primary {
   color: #fff;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.project-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+  color: #fff;
+}
+
+.project-btn-ghost {
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border-muted);
+}
+
+.project-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent);
+  color: #93c5fd;
 }

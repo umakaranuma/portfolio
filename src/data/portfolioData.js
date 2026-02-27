@@ -7,103 +7,141 @@ export const PROJECTS = [
     category: 'company',
     name: 'Finemart',
     subtitle: 'E-Commerce Platform',
+    summary: 'Full-featured e-commerce app with secure payments, cart management, and order tracking.',
     description:
       'A full-featured e-commerce application delivering seamless shopping experiences with secure payments, intelligent cart management, and real-time order tracking.',
     tags: ['Flutter', 'BLoC', 'REST API', 'Payment Gateway'],
+    filterTags: ['Flutter', 'Payments'],
     bullets: ['Secure Payments', 'Order Tracking', 'Cart Management', 'Real-time Updates'],
+    metricsBadge: null,
   },
   {
     id: 'ryba',
     category: 'company',
     name: 'Ryba',
     subtitle: 'Real-Time Messaging',
+    summary: 'Real-time messaging platform with offline support and push notifications.',
     description:
       'A powerful real-time messaging platform built for seamless communication with offline support, push notifications, and robust message persistence.',
     tags: ['Flutter', 'Ably', 'BLoC', 'SQLite'],
+    filterTags: ['Flutter', 'Realtime'],
     bullets: ['Real-time Chat', 'Push Notifications', 'Offline Support', 'Message Persistence'],
+    metricsBadge: null,
   },
   {
     id: 'medlearning',
     category: 'freelance',
     name: 'MedLearning',
     subtitle: 'E-Learning Platform',
+    summary: 'Subscription-based e-learning platform with video content and progress tracking.',
     description:
       'A subscription-based e-learning platform featuring video streaming, Stripe payment integration, and comprehensive progress tracking for educational content.',
     tags: ['Flutter', 'Video Streaming', 'Stripe', 'Firebase'],
+    filterTags: ['Flutter', 'Video', 'Payments'],
     bullets: ['Video Streaming', 'Progress Tracking', 'Subscription Management', 'Offline Caching'],
+    metricsBadge: '95%+ coverage',
+    link: null,
+    caseStudy: {
+      problem: 'Client needed a scalable e-learning app with payments and offline access.',
+      solution: 'Built a Flutter app with Stripe subscriptions, video streaming, and Hive for offline caching.',
+      architecture: 'Clean Architecture, BLoC, modular feature structure.',
+      challenges: 'Video buffering and subscription state sync; solved with queue-based downloads and webhook handling.',
+      results: 'Delivered on schedule with 95%+ test coverage; smooth offline experience.',
+    },
   },
   {
     id: 'empower',
     category: 'company',
     name: 'Empower',
     subtitle: 'Workflow Management',
+    summary: 'Workflow-based assistance management system with complex state orchestration.',
     description:
       'An intelligent workflow-based assistance management system featuring complex state orchestration and clean architecture for enterprise-grade task automation.',
     tags: ['Flutter', 'Workflow Engine', 'Clean Architecture'],
+    filterTags: ['Flutter', 'Backend'],
     bullets: ['Workflow Engine', 'Task Automation', 'State Orchestration', 'Clean Architecture'],
+    metricsBadge: null,
   },
   {
     id: 'moura',
     category: 'company',
     name: 'Moura',
     subtitle: 'Online E-Learning Platform',
+    summary: 'Online e-learning platform with course management and progress tracking.',
     description:
       'An online e-learning platform enabling educational content delivery, course management, and progress tracking for learners.',
     tags: ['Flutter', 'E-Learning', 'REST API', 'Clean Architecture'],
+    filterTags: ['Flutter', 'Backend'],
     bullets: ['Course Management', 'Content Delivery', 'Progress Tracking', 'User Management'],
+    metricsBadge: null,
   },
   {
     id: 'envoy',
     category: 'company',
     name: 'Envoy',
     subtitle: 'Lead Management System',
+    summary: 'Lead management system for finance and insurance; Django backend.',
     description:
       'A lead management system for finance and insurance companies, built with Django backend to capture, qualify, and track leads through the sales pipeline.',
     tags: ['Django', 'Python', 'REST API', 'Lead Management'],
+    filterTags: ['Backend'],
     bullets: ['Lead Capture & Qualification', 'Sales Pipeline', 'Backend API', 'Finance & Insurance'],
+    metricsBadge: null,
   },
   {
     id: 'tuty',
     category: 'company',
     name: 'Tuty',
     subtitle: 'AI-Powered English Learning',
+    summary: 'AI-powered online English learning platform mobile application.',
     description:
       'An AI-powered online English learning platform delivered as a mobile application, helping learners improve their English with personalized, intelligent lessons and practice.',
     tags: ['Flutter', 'AI', 'English Learning', 'Mobile'],
+    filterTags: ['Flutter', 'Backend'],
     bullets: ['AI-Powered Lessons', 'Personalized Learning', 'Online Platform', 'Mobile App'],
+    metricsBadge: null,
   },
   {
     id: 'finzo',
     category: 'personal',
     name: 'Finzo',
     subtitle: 'Money Manager',
+    summary: 'Personal finance and notes app with local storage (Hive).',
     description:
       'A personal finance management app to track expenses, manage budgets, and monitor savings with intuitive charts and detailed financial insights.',
     tags: ['Flutter', 'Provider', 'Charts', 'Local Storage'],
+    filterTags: ['Flutter'],
     bullets: ['Expense Tracking', 'Budget Management', 'Savings Goals', 'Financial Reports'],
     link: 'https://github.com/umakaranuma/moneyman',
+    metricsBadge: null,
   },
   {
     id: 'snapchamp',
     category: 'personal',
     name: 'Snap Champ',
     subtitle: 'Photo Editor',
+    summary: 'Photo editing app with filters, adjustments, and export.',
     description:
       'A powerful photo editing application with filters, adjustments, and creative tools to enhance and transform your photos with ease.',
     tags: ['Flutter', 'Image Processing', 'Filters', 'Canvas'],
+    filterTags: ['Flutter'],
     bullets: ['Photo Filters', 'Image Adjustments', 'Creative Tools', 'Export Options'],
     link: 'https://gitlab.com/fynux.bussiness-group/snap_champ',
+    metricsBadge: null,
   },
   {
     id: 'tunee',
     category: 'personal',
     name: 'Tunee',
     subtitle: 'MP3 Player',
+    summary: 'Music player with playlist management and equalizer.',
     description:
       'A sleek and feature-rich music player with playlist management, equalizer controls, and seamless audio playback experience.',
     tags: ['Flutter', 'Audio Player', 'Equalizer', 'Playlist'],
+    filterTags: ['Flutter'],
     bullets: ['MP3 Playback', 'Playlist Management', 'Equalizer', 'Background Playback'],
     link: 'https://gitlab.com/umakaran/mp3_player',
+    metricsBadge: null,
   },
 ];
 
@@ -232,9 +270,16 @@ export const SOCIAL_LINKS = {
  */
 export const PORTFOLIO_INFO = {
   name: 'Uma',
-  fullName: 'Uma',
-  role: 'Flutter Developer',
-  titleLine: 'Flutter Developer | Clean Architecture | BLOC',
+  fullName: 'Umakaran Ampigaipagan',
+  initials: 'UA',
+  role: 'Senior Flutter Developer',
+  titleLine: 'Senior Flutter Developer | Django/DRF',
+  valueStatement: [
+    'I build production-grade mobile apps and backends that scale.',
+    'Clean Architecture, measurable impact, and team growth.',
+  ],
+  location: 'Jaffna, Sri Lanka',
+  availability: 'Available for full-time, freelance & contract',
   experience: '3+ years experience',
   tagline: 'Building production-grade Flutter applications with clean architecture, beautiful UI, and a strong focus on performance and developer experience.',
   badge: 'Featured Work',
@@ -243,7 +288,37 @@ export const PORTFOLIO_INFO = {
 };
 
 /**
- * Professional experience
+ * Trust strip – credibility row (above the fold impact)
+ */
+export const TRUST_STRIP = [
+  '3+ years',
+  '5+ production apps',
+  '95%+ test coverage',
+  'Published packages',
+  'CI/CD & release',
+];
+
+/**
+ * Highlights / impact cards (numbers that get attention)
+ */
+export const HIGHLIGHTS = [
+  { value: '40%', label: 'Bug reduction (state management)' },
+  { value: '30%', label: 'Faster startup (optimization)' },
+  { value: '3', label: 'Juniors mentored' },
+  { value: '95%+', label: 'Test coverage' },
+  { value: '3', label: 'Packages published' },
+];
+
+/**
+ * Open source / packages
+ */
+export const PACKAGES = [
+  { name: 'Flutter packages', platform: 'Pub.dev', count: 2, description: 'Reusable Flutter packages for common patterns and utilities.' },
+  { name: 'Python package', platform: 'PyPI', count: 1, description: 'Open source tooling for backend and automation.' },
+];
+
+/**
+ * Professional experience (timeline)
  */
 export const EXPERIENCE = [
   {
@@ -251,6 +326,7 @@ export const EXPERIENCE = [
     company: 'Apptimus Tech (Pvt) Ltd.',
     dates: 'Jan 2023 - Present',
     location: 'Jaffna, Sri Lanka',
+    tools: ['Flutter', 'BLoC', 'Dio', 'Firebase', 'Clean Architecture'],
     bullets: [
       'Architected and developed multiple production-grade Flutter applications using Clean Architecture and BLOC pattern, ensuring scalable and maintainable codebases',
       'Implemented comprehensive state management solutions using BLOC and Provider, reducing app state bugs by 40%',
@@ -265,6 +341,7 @@ export const EXPERIENCE = [
     company: 'Code94 Labs',
     dates: 'Nov 2024 - Jan 2025',
     location: 'Remote',
+    tools: ['Flutter', 'Stripe', 'Hive', 'Video streaming'],
     bullets: [
       'Developed MedLearning e-learning platform with video streaming, subscription management via Stripe, and offline content caching',
       'Implemented local data persistence using Hive and SharedPreferences for seamless offline-first user experience',

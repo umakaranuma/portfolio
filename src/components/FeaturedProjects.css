@@ -1,0 +1,65 @@
+.featured-projects {
+  padding: 48px 0 56px;
+}
+
+.featured-header {
+  margin-bottom: 28px;
+}
+
+.featured-title {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.featured-subtitle {
+  margin: 0 0 20px;
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+.featured-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.featured-chip {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.featured-chip:hover {
+  color: var(--text-primary);
+  border-color: var(--border-muted);
+  background: var(--bg-card-hover);
+}
+
+.featured-chip.active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  border-color: transparent;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .featured-projects {
+    padding: 36px 0 48px;
+  }
+}

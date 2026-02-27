@@ -1,10 +1,11 @@
 import './ProjectCard.css';
 
 /**
- * ProjectCard component - displays a single project
- * @param {Object} project - Project data
+ * Project card: title, summary, tech chips, metrics badge, Case Study | GitHub | Live
  */
-function ProjectCard({ project }) {
+function ProjectCard({ project, onCaseStudyClick }) {
+  const hasCaseStudy = project.caseStudy && onCaseStudyClick;
+
   return (
     <article className="project-card">
       <div className="project-icon" />
@@ -13,34 +14,28 @@ function ProjectCard({ project }) {
           <h2 className="project-title">{project.name}</h2>
           <p className="project-subtitle">{project.subtitle}</p>
         </div>
+        {project.metricsBadge && (
+          <span className="project-metrics">{project.metricsBadge}</span>
+        )}
       </div>
-      <p className="project-description">{project.description}</p>
-
-      <ul className="project-bullets">
-        {project.bullets.map((item) => (
-          <li key={item}>{item}</li>
+      <p className="project-description">{project.summary || project.description}</p>
+      <div className="project-tags">
+        {(project.tags || []).slice(0, 5).map((tag) => (
+          <span key={tag} className="tag">
+            {tag}
+          </span>
         ))}
-      </ul>
-
-      <div className="project-footer">
-        <div className="project-tags">
-          {project.tags.map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
-            </span>
-          ))}
-        </div>
-        {project.link ? (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            className="ghost-button"
-          >
-            View Project
+      </div>
+      <div className="project-actions">
+        {hasCaseStudy && (
+          <button type="button" className="project-btn project-btn-primary" onClick={onCaseStudyClick}>
+            Case Study
+          </button>
+        )}
+        {project.link && (
+          <a href={project.link} target="_blank" rel="noreferrer" className="project-btn project-btn-ghost">
+            GitHub
           </a>
-        ) : (
-          <button className="ghost-button">View Project</button>
         )}
       </div>
     </article>

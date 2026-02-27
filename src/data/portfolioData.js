@@ -27,6 +27,7 @@ export const PROJECTS = [
     filterTags: ['Flutter', 'Realtime'],
     bullets: ['Real-time Chat', 'Push Notifications', 'Offline Support', 'Message Persistence'],
     metricsBadge: null,
+    playStore: 'https://play.google.com/store/search?q=ryba&c=apps&hl=en',
   },
   {
     id: 'medlearning',
@@ -41,6 +42,7 @@ export const PROJECTS = [
     bullets: ['Video Streaming', 'Progress Tracking', 'Subscription Management', 'Offline Caching'],
     metricsBadge: '95%+ coverage',
     link: null,
+    playStore: 'https://play.google.com/store/apps/details?id=com.medlearning.medlearningmobile&hl=en',
     caseStudy: {
       problem: 'Client needed a scalable e-learning app with payments and offline access.',
       solution: 'Built a Flutter app with Stripe subscriptions, video streaming, and Hive for offline caching.',
@@ -151,7 +153,7 @@ export const PROJECTS = [
 export const STATS = [
   { id: 'apps', label: 'Production Apps', value: '5+' },
   { id: 'experience', label: 'Years Experience', value: '3+' },
-  { id: 'oss', label: 'Open Source Packages', value: '3' },
+  { id: 'oss', label: 'Open Source Packages', value: '4' },
 ];
 
 /**
@@ -306,15 +308,37 @@ export const HIGHLIGHTS = [
   { value: '30%', label: 'Faster startup (optimization)' },
   { value: '3', label: 'Juniors mentored' },
   { value: '95%+', label: 'Test coverage' },
-  { value: '3', label: 'Packages published' },
+  { value: '4', label: 'Packages published' },
 ];
 
 /**
  * Open source / packages
  */
 export const PACKAGES = [
-  { name: 'Flutter packages', platform: 'Pub.dev', count: 2, description: 'Reusable Flutter packages for common patterns and utilities.' },
-  { name: 'Python package', platform: 'PyPI', count: 1, description: 'Open source tooling for backend and automation.' },
+  {
+    name: 'map_apptimus',
+    platform: 'Pub.dev',
+    url: 'https://pub.dev/packages/map_apptimus',
+    description: 'Easy integration for Google Maps in Flutter apps: map view, search, routes, straight and route distance. Simplifies map setup and configuration.',
+  },
+  {
+    name: 'api_apptimus',
+    platform: 'Pub.dev',
+    url: 'https://pub.dev/packages/api_apptimus',
+    description: 'Common API integration and error handling for Flutter. HTTP requests (GET, POST), Dio-based client, and NetworkExceptions for consistent API formatting and exception handling.',
+  },
+  {
+    name: 'mServices',
+    platform: 'PyPI',
+    url: 'https://pypi.org/project/mServices/',
+    description: 'Common Python package with response handling, QueryBuilder service, and validator service for consistent API and data validation across projects.',
+  },
+  {
+    name: 'djmigrator',
+    platform: 'PyPI',
+    url: 'https://pypi.org/project/djmigrator/',
+    description: 'Smart Django migration manager. Resolves migration-related issues with one command by comparing models to the database schema and auto-generating or applying only necessary migrations.',
+  },
 ];
 
 /**
@@ -412,7 +436,7 @@ export const CERTIFICATIONS = [
  */
 export const ACHIEVEMENTS = [
   'Published 2 Flutter packages on Pub.dev',
-  'Published 1 Python package on PyPI',
+  'Published 2 Python packages on PyPI (mServices, djmigrator)',
   'Delivered 5+ production-grade applications',
   'Mentored 3 junior developers',
 ];

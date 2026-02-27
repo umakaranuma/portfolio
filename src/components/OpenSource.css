@@ -37,6 +37,24 @@
   box-shadow: var(--shadow-sm);
 }
 
+.opensource-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.opensource-card-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+.opensource-link-label {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
 .opensource-header {
   display: flex;
   align-items: center;

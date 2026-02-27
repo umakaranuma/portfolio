@@ -37,6 +37,11 @@ function ProjectCard({ project, onCaseStudyClick }) {
             GitHub
           </a>
         )}
+        {project.playStore && (
+          <a href={project.playStore} target="_blank" rel="noreferrer" className="project-btn project-btn-ghost">
+            Play Store
+          </a>
+        )}
       </div>
     </article>
   );

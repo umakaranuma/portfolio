@@ -1,0 +1,172 @@
+.resume-section {
+  margin-top: 8px;
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.resume-left,
+.resume-right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.resume-heading {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.resume-block {
+  padding-bottom: 4px;
+}
+
+/* Experience */
+.resume-job {
+  margin-bottom: 24px;
+}
+
+.resume-job:last-child {
+  margin-bottom: 0;
+}
+
+.resume-job-header {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.resume-job-company {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.resume-job-meta {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.resume-bullets {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.resume-bullets li {
+  margin-bottom: 6px;
+}
+
+.resume-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* Key Projects */
+.resume-project {
+  margin-bottom: 16px;
+}
+
+.resume-project:last-child {
+  margin-bottom: 0;
+}
+
+.resume-project-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.resume-project-tags {
+  font-size: 12px;
+  color: #2d9cdb;
+  margin-top: 2px;
+}
+
+.resume-project-desc {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+/* Education */
+.resume-edu-degree {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.resume-edu-institution {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2px;
+}
+
+/* Certifications */
+.resume-certs {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+/* Technical Skills (right column) */
+.resume-skill-group {
+  margin-bottom: 14px;
+}
+
+.resume-skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.resume-skill-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.resume-skill-items {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+/* Achievements */
+.resume-achievements {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.resume-achievements li {
+  margin-bottom: 6px;
+}
+
+.resume-achievements li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .resume-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

@@ -1,0 +1,29 @@
+/* Import component styles */
+@import './components/Navigation.css';
+@import './components/Hero.css';
+@import './components/Projects.css';
+@import './components/ProjectCard.css';
+@import './components/Skills.css';
+@import './components/Resume.css';
+@import './components/CTA.css';
+
+/* Global styles - dark theme to match design */
+.page {
+  min-height: 100vh;
+  padding: 32px 24px 64px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #e5ecff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 20px 16px 40px;
+  }
+}

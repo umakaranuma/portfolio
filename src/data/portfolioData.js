@@ -6,6 +6,7 @@ import tuneeIcon from '../assets/icons/tunee-icon.png';
 import snapchampIcon from '../assets/icons/snap-champ-icon.png';
 import medlearningIcon from '../assets/icons/medlearning-icon.png';
 import finemartIcon from '../assets/icons/finemart-icon.png';
+import mouraIcon from '../assets/icons/moura-icon.png';
 
 export const PROJECTS = [
   {
@@ -84,6 +85,7 @@ export const PROJECTS = [
     filterTags: ['Flutter', 'Backend', 'Payments'],
     bullets: ['Course Management', 'Content Delivery', 'Progress Tracking', 'User Management'],
     metricsBadge: null,
+    icon: mouraIcon,
   },
   {
     id: 'envoy',

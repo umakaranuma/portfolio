@@ -1,6 +1,12 @@
 /**
  * Project data for the portfolio
  */
+import finzoIcon from '../assets/icons/finzo-icon.jpg';
+import tuneeIcon from '../assets/icons/tunee-icon.png';
+import snapchampIcon from '../assets/icons/snap-champ-icon.png';
+import medlearningIcon from '../assets/icons/medlearning-icon.png';
+import finemartIcon from '../assets/icons/finemart-icon.png';
+
 export const PROJECTS = [
   {
     id: 'finemart',
@@ -11,9 +17,10 @@ export const PROJECTS = [
     description:
       'A full-featured e-commerce application delivering seamless shopping experiences with secure payments, intelligent cart management, and real-time order tracking.',
     tags: ['Flutter', 'BLoC', 'REST API', 'Payment Gateway'],
-    filterTags: ['Flutter', 'Payments'],
+    filterTags: ['Flutter', 'Video', 'Payments'],
     bullets: ['Secure Payments', 'Order Tracking', 'Cart Management', 'Real-time Updates'],
     metricsBadge: null,
+    icon: finemartIcon,
   },
   {
     id: 'ryba',
@@ -50,6 +57,7 @@ export const PROJECTS = [
       challenges: 'Video buffering and subscription state sync; solved with queue-based downloads and webhook handling.',
       results: 'Delivered on schedule with 95%+ test coverage; smooth offline experience.',
     },
+    icon: medlearningIcon,
   },
   {
     id: 'empower',
@@ -73,7 +81,7 @@ export const PROJECTS = [
     description:
       'An online e-learning platform enabling educational content delivery, course management, and progress tracking for learners.',
     tags: ['Flutter', 'E-Learning', 'REST API', 'Clean Architecture'],
-    filterTags: ['Flutter', 'Backend'],
+    filterTags: ['Flutter', 'Backend', 'Payments'],
     bullets: ['Course Management', 'Content Delivery', 'Progress Tracking', 'User Management'],
     metricsBadge: null,
   },
@@ -116,6 +124,7 @@ export const PROJECTS = [
     bullets: ['Expense Tracking', 'Budget Management', 'Savings Goals', 'Financial Reports'],
     link: 'https://github.com/umakaranuma/moneyman',
     metricsBadge: null,
+    icon: finzoIcon,
   },
   {
     id: 'snapchamp',
@@ -130,6 +139,7 @@ export const PROJECTS = [
     bullets: ['Photo Filters', 'Image Adjustments', 'Creative Tools', 'Export Options'],
     link: 'https://gitlab.com/fynux.bussiness-group/snap_champ',
     metricsBadge: null,
+    icon: snapchampIcon,
   },
   {
     id: 'tunee',
@@ -144,6 +154,7 @@ export const PROJECTS = [
     bullets: ['MP3 Playback', 'Playlist Management', 'Equalizer', 'Background Playback'],
     link: 'https://gitlab.com/umakaran/mp3_player',
     metricsBadge: null,
+    icon: tuneeIcon,
   },
 ];
 

@@ -65,6 +65,13 @@
   box-shadow: 0 4px 12px var(--accent-glow);
 }
 
+.project-icon-img {
+  object-fit: contain;
+  background: transparent;
+  box-shadow: none;
+  padding: 2px;
+}
+
 .project-title {
   margin: 0;
   font-size: 17px;

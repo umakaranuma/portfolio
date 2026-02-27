@@ -8,7 +8,11 @@ function ProjectCard({ project, onCaseStudyClick }) {
 
   return (
     <article className="project-card">
-      <div className="project-icon" />
+      {project.icon ? (
+        <img src={project.icon} alt="" className="project-icon project-icon-img" />
+      ) : (
+        <div className="project-icon" />
+      )}
       <div className="project-header">
         <div>
           <h2 className="project-title">{project.name}</h2>
